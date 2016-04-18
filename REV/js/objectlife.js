@@ -114,7 +114,7 @@ prodthumb.prototype.Prepare = function(){
     $(target.wrapper + " " + target.content).each(function(){
         var o = $(this),
             w = o.width(),
-            l = o.offset().left - $(target.wrapper).offset().left
+            l = o.offset().left - $(target.wrapper).offset().left,
             c = $(this).find("[image]") || [],
             b = c.attr("image") || [],
             j = "";
