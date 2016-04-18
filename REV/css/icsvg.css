@@ -1,0 +1,145 @@
+/*
+*
+* ICON SVG
+* Base by Adi Nugraha Y
+*
+*
+*/
+/*
+pmc > Pemicu, letakkan pada DIV / objek yang membungkus svg tersebut!
+      [sama dengan isi fungsi "ini" dibawah]
+ini > pembungkus 
+      [nag:namaRuangLingkup]
+bag > bagian
+      [g  :garis]
+      [m  :muka]
+      [t  :transparent]
+b   > bagian paling spesifik
+      [b  :belakang]
+      [t  :tengah]
+      [d  :depan]
+      [la :luar]
+      [da :dalam]
+*/
+
+
+/*
+* BLOK ANIMASI ================================
+*/
+@keyframes example {
+    0%   {background-color: red; left:0px; top:0px;}
+    25%  {background-color: yellow; left:200px; top:0px;}
+    50%  {background-color: blue; left:200px; top:200px;}
+    75%  {background-color: green; left:0px; top:200px;}
+    100% {background-color: red; left:0px; top:0px;}
+}
+
+/*
+* PUBLIK
+*/
+[ini^="nag"] * {
+    stroke-width:1.3px;
+    /*-webkit-transition:0.5s;*/
+}
+[ini^="nag"] [bag="g"]{
+    stroke:#000;
+    fill:transparent;
+}
+[ini^="nag"] [bag="m"]{
+    stroke:none;
+    fill:#000;
+}
+
+[ini^="nag"] [bag="t"]{
+    stroke:none;
+    fill:transparent;
+}
+
+
+
+/*
+* Arah / Arrow / terserah apa yang kalian namakan.
+*/
+[ini^="nag arah"]{
+}
+[ini^="nag arah"] [bag="g"]{
+}
+[ini^="nag arah"] [bag="m"]{
+}
+/* individual line style && reset animation */
+[ini^="nag arah"] [b="b"]{
+    transform:translate(0,0);
+    transition:0.5s;
+}
+[ini^="nag arah"] [b="t"]{
+    transform:translate(0,0);
+    transition:0.2s;
+}
+[ini^="nag arah"] [b="d"]{
+    transform:translate(0,0);
+    transition:0.2s;
+}
+/* Hover Animation Arah */
+  /* Kiri */
+  /* keyframe */
+    @keyframes arah-besar-ki {
+        0%  {transform:translate(0,0);}
+        50% {transform:translate(-5px, 0);}
+        100%{transform:translate(0,0);}
+    }
+    [ini="nag arah kiri"] > [b="t"], [ini="nag arah kiri"] > [b="t-p"]{
+       animation: arah-besar-ki 2s cubic-bezier(0.54, -1, 0.39, 2.01) infinite
+    }
+    [ini="nag arah kiri"]:hover > [b="b"]{
+        transform: translate(-40px, 0);
+    }
+    [ini="nag arah kiri"]:hover > [b="d"]{
+        transform: translate(35px, 0);
+    }
+  /* Kanan */
+    /* keyframe */
+    @keyframes arah-besar-ka {
+        0%  {transform:translate(0,0);}
+        50% {transform:translate(5px, 0);}
+        100%{transform:translate(0,0);}
+    }
+    [ini="nag arah kanan"] > [b="t"], [ini="nag arah kanan"] > [b="t-p"]{
+       animation: arah-besar-ka 2s cubic-bezier(0.54, -1, 0.39, 2.01) infinite
+    }
+    [ini="nag arah kanan"]:hover > [b="b"]{
+        transform: translate(40px, 0);
+    }
+    [ini="nag arah kanan"]:hover > [b="d"]{
+        transform: translate(-35px, 0);
+    }
+
+
+
+
+/*
+* Arah Kecil (ArahKcl)
+*/
+[ini^="nag arahKcl"]{}
+[ini^="nag arahKcl"] [bag="g"]{}
+[ini^="nag arahKcl"] [bag="m"]{}
+/* individual line style */
+[ini^="nag arahKcl"] [b="la"] {}
+[ini^="nag arahKcl"] [b="b"]  {}
+[ini^="nag arahKcl"] [b="d"]  {}
+/* Hover Animation Arah Kecil */
+  /* Kiri */
+  
+  /* Kanan */
+
+
+
+
+/*
+* Pagar
+*/
+[ini^="nag pagar"]{}
+[ini^="nag pagar"] [bag="g"]{}
+
+
+
+

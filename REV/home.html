@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-US" charset="UTF-8" content="text/html;">
+<head>
+<title>Homepage</title>
+<link rel="stylesheet" type="text/css" media="screen" href="fonts/font-config.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/home.css" />
+<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+<script type="text/javascript" src="js/particles.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/objectlife.js"></script>
+<script type="text/javascript" src="js/lower.js"></script>
+<script>
+
+</script>
+
+</head>
+<body>
+
+<!-- start Design -->
+<div id="loading"></div>
+<div id="background">
+<div class="bg-cover bag-absolute"></div>
+<div id="partic-bg"></div>
+</div>
+<div id="nav" class="navigasi bag-relative">
+    <div class="nav-wrap">
+        <div class="left-side">
+            <div class="inner-pad">
+                <ul class="menu">
+                    <li><a href="#index">Home</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#hot">Promo</a></li>
+                    <li><a href="#other">Other</a></li>
+                    <li><a href="#coupon">Coupon!</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="inner-pad"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div id="badan" class="badan">
+    <div class="bdn-wrap">
+
+        <div id="header" class="header bag-relative">
+            <div class="header-bg bag-absolute">
+                <div class="header-cover bag-absolute"></div>
+                <div class="header-img" dngData="header">
+                <!-- Place Header image here -->
+                    <div class="img-cover dng-autowidth" gData="bungkus">
+                        <div class="img-header dng-content" id="header-0" gURL="img\header\knk1.jpg"></div>
+                        <div class="img-header dng-content" id="header-1" gURL="img\header/sg1.jpg"></div>
+                        <div class="img-header dng-content" id="header-2" gURL="img\header/th1.jpg"></div>
+                        <div class="img-header dng-content" id="header-4" gURL="img\header/an1.jpg"></div>
+                    </div>
+                <!-- END Header Image Here -->
+                </div>
+            </div>
+            <div class="header-btn bag-relative" gData="hover-trigger">
+                <div class="header-left" pmc="nag arah kiri">
+                <!-- START LEFT ARRWOW -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 160" class="header-arrow arrow_left bag-relative">
+                    <g id="LeftArrow" kel="nisb" ini="nag arah kiri">
+                        <polyline bag="t" points="0,0 100,0 100,150 0,150"/>
+                        <polyline bag="g" b="t" points="81.6665,26.5 27.6665,80.5 81.6665,134.5"/>
+                        <polyline bag="g" b="d" points="33.6665,56.5 9.6665,80.5 33.6665,104.5"/>
+                        <polyline bag="g" b="b" points="63.6665,62.5 45.6665,80.5 63.6665,98.5"/>
+                        <circle bag="g" b="t-p" cx="81.6665" cy="26.5" r="18"/>
+                        <circle bag="g" b="t-p" cx="81.6665" cy="134.5" r="18"/>
+                        <circle bag="m" b="t-p" cx="81.6665" cy="26.5" r="2.5"/>
+                        <circle bag="m" b="t-p" cx="81.6665" cy="134.5" r="2.5"/>
+                    </g>
+                    </svg>
+                <!-- END LEFT ARRWOOOW -->
+                </div>
+                <div class="header-center">
+                    <div class="page-title">
+                        <h1 class="page-title-content text-anaglyph">
+                            1-Distro
+                        </h1>
+                    </div>
+                    <div class="page-title-bottom"></div>
+                    <div class="page-line">
+                    <!-- START LINE
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 518 20" >
+                            <g ini="nag pembatas">
+                                <line bag="g" stroke-miterlimit="10" x1="7.1875" y1="7" x2="511.1875" y2="7"/>
+                                <circle bag="g" stroke-miterlimit="10" cx="7.1875" cy="7" r="6"/>
+                                <circle bag="g" stroke-miterlimit="10" cx="511.1875" cy="7" r="6"/>
+                                <line bag="g" stroke-miterlimit="10" x1="187.1875" y1="13" x2="331.1875" y2="13"/>
+                                <line bag="g" stroke-miterlimit="10" x1="211.1875" y1="19" x2="307.1875" y2="19"/>
+                            </g>
+                        </svg>
+                        END LINE -->
+                    </div>
+
+                </div>
+                <div class="header-right">
+                <!-- START RIGHT ARRWOOOW -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 160" class="header-arrow arrow_right bag-relative">
+                    <g id="RightArrow" ini="nag arah kanan">
+                        <polyline bag="t" points="0,0 100,0 100,150 0,150"/>
+                        <polyline bag="g" b="b" points="45.6665,62.5 63.6665,80.5 45.6665,98.5"/>
+                        <polyline bag="g" b="t" points="27.6665,26.5 81.6665,80.5 27.6665,134.5"/>
+                        <polyline bag="g" b="d" points="75.6665,56.5 99.6665,80.5 75.6665,104.5"/>
+                        <circle bag="g" b="t-p" stroke-miterlimit="10" cx="27.6665" cy="26.5" r="18"/>
+                        <circle bag="g" b="t-p" stroke-miterlimit="10" cx="27.6665" cy="134.5" r="18"/>
+                        <circle bag="m" b="t-p" cx="27.6665" cy="26.5" r="2.5"/>
+                        <circle bag="m" b="t-p" cx="27.6665" cy="134.5" r="2.5"/>
+                    </g>
+                    </svg>
+                <!-- END RIGHT ARRWOOOW -->
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="header-img-btn">
+                <div class="header-img-btn button-inner" blok="header-buttons">
+                    <span class="h-btn" addr=0></span>
+                    <span class="h-btn" addr=1></span>
+                    <span class="h-btn" addr=2 aktif></span>
+                    <span class="h-btn" addr=3></span>
+                    <span class="h-btn" addr=4></span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content content-1">
+            <div class="content-inner">
+                <div class="content-header">
+                    <div class="content-header-left">
+                    <!-- START PAGER -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" class="header-pagar pagar_content bag-relative">
+                            <g id="ContentPagar1" ini="nag pagar konten">
+                                <line bag="g" stroke-miterlimit="10" x1="36" y1="0" x2="24" y2="108"/>
+                                <line bag="g" stroke-miterlimit="10" x1="84" y1="0" x2="72" y2="108"/>
+                                <line bag="g" stroke-miterlimit="10" x1="6" y1="30.5" x2="108" y2="30.5"/>
+                                <line bag="g" stroke-miterlimit="10" x1="0" y1="78.5" x2="102" y2="78.5"/>
+                            </g>
+                        </svg>
+                    <!-- END PAGER -->
+                    </div>
+                    <div class="content-header-right">
+                        <h3>Promo Di Bulan Agustus</h3>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="content-prod">
+                    <div class="content-prod-left prod-left" dngData="left-trig">
+                    <!-- START CONTENT ARROW LEFT -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 120" class="content-left-arrow bag-relative">
+                        <g id="cLeftArrow" ini="nag arahKcl kiri">
+                            <polygon    bag="g" b="la" stroke-miterlimit="10" points="88,5 34,59 88,113"/>
+                            <polyline   bag="g" b="d"  stroke-miterlimit="10" points="79,24.833 44.666,59.0835 79,93.3335"/>
+                            <circle     bag="g" b="b"  stroke-miterlimit="10" cx="61.833" cy="58.667" r="4.667"/>
+                        </g>
+                    </svg>
+                    <!-- END CONTENT ARROW LEFT -->
+                    </div>
+                    <div class="content-prod-center prod-center">
+
+                        <!-- START Ini adalah daftar produk -->
+
+                        <div class="product-wrapper" dngData="overflow">
+
+                            <div class="product-wrapper-autosize" dngData="auto-width">
+
+                                <prth class="product-content bnd-bayangan" id="prod-1">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 1</h4>
+                                            <h5>Rp. 50.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-2">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 2</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-3">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 3</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-4">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 4</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-5">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 5</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-6">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 6</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-7">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 7</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-8">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 8</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-9">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 9</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+
+                                <prth class="product-content bnd-bayangan" id="prod-10">
+                                    <div class="product-content-img-wrap">
+                                    </div>
+                                    <div class="product-content-info">
+                                        <div class="product-content-info-top">
+                                            <h4>Nama Barang 10</h4>
+                                            <h5>Rp. 150.000,-</h5>
+                                        </div>
+                                        <div class="product-content-info-bottom">
+
+
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </prth>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- END daftar produk -->
+
+                    </div>
+                    <div class="content-prod-right prod-right" dngData="right-trig">
+                    <!-- START CONTENT ARROW RIGHT -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 120" class="content-right-arrow bag-relative">
+                        <g id="cRightArrow" ini="nag arahKcl kanan" >
+                            <polygon    bag="g" b="la" stroke-miterlimit="10" points="7,5 61,59 7,113"/>
+                            <polyline   bag="g" b="d"  stroke-miterlimit="10" points="16,24.833 50.334,59.0835 16,93.3335"/>
+                            <circle     bag="g" b="b"  stroke-miterlimit="10" cx="33.167" cy="58.667" r="4.667"/>
+                        </g>
+                    </svg>
+                    <!-- END CONTENT ARROW RIGHT -->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="kaki" class="kaki">
+    <div class="kaki-wrap">
+    </div>
+</div>
+
+<!-- end Design -->
+
+</body>
+</html>

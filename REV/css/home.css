@@ -1,0 +1,311 @@
+/*
+*
+* CSS Toko Baju
+* Softskill Kelompok [x]
+* Base by Adi Nugraha Y
+*
+*
+*/
+@import "icsvg.css";
+
+/* Clear Location */
+html, body, h1, h2, h3, h4, h5, h6, p, code, crack, hr{padding:0;margin:0;}
+
+/*********************************
+* CSS PUBLIK
+*/
+body{
+    font-family: 'Work Sans', sans-serif;
+    background: #fff;
+    font-weight: light;
+}
+
+.bag-relative{
+    position:relative;
+}
+.bag-absolute{
+    position:absolute;
+}
+.page-line {
+    position: relative;
+    padding: 15px 30px 0;
+}
+.text-anaglyph{
+    text-shadow: -3px 0 0 rgba(255, 0, 0, 0.5), 3px 0 0 rgba(0,255,255,0.5);
+}
+.bnd-bayangan{
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.clear{clear:both;display:block;}
+
+
+/* Width Configuration */
+#nav .nav-wrap, #badan .bdn-wrap, #kaki .kaki-wrap{
+    width: 100%;
+    margin:auto;
+}
+/*
+* Loading
+*/
+#loading{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;left:0;
+    background:#000;
+    z-index:99999;
+}
+
+
+
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: url('../img/bg/cover.png'), url('../img/bg/bg1.jpg') top center no-repeat;*/
+    background-size:initial cover;
+    z-index: -1;
+}
+
+#background .bg-cover{
+    width:inherit;
+    height:inherit;
+}
+#partic-bg{
+    width:inherit;
+    height:inherit;
+}
+
+
+/*********************************
+* CSS NAVIGASI
+*/
+#nav {
+    /*background: #242424;*/
+    min-height: 60px;
+    /*box-shadow: 10px 0 10px #000;*/
+    z-index: 100;
+    /*border-bottom: 5px solid #FF005E*/
+}
+#nav .nav-wrap{}
+#nav .inner-pad{
+
+}
+#nav .left-side{
+    float:left;
+}
+#nav .left-side .inner-pad{}
+#nav .right-side{
+    float:right;
+
+}
+#nav .right-side .inner-pad{}
+
+#nav ul.menu{
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#nav ul.menu li{
+    float: left;
+    line-height: 56px;
+    min-width: 110px;
+    text-align: center;
+    margin-left: 4px;
+    background: #333;
+    border-radius: 0 0 5px 5px;
+}
+#nav ul.menu li:first-child{margin-left: 0;}
+#nav ul.menu li a{
+    display: block;
+    font-size: 20px;
+    text-decoration: inherit;
+    color: #fff;
+    font-weight: lighter;
+}
+#nav ul.menu{}
+
+
+
+/*********************************
+* CSS BADAN
+*/
+#badan{
+    margin-bottom:50px;
+}
+#badan .bdn-wrap{}
+/* Header  */
+#header{
+    height:470px;
+    border-radius: 10px;
+    margin:50px 0;
+    overflow:hidden;
+}
+#header .header-bg{
+    height:inherit;
+    border-radius:inherit;
+    width: 100%;
+}
+#header .header-bg .header-cover {
+    height: inherit;
+    background: rgba(15, 15, 15, 0.3) url('../img/header/cover/a.png');
+    width: 100%;
+    z-index: 1;
+}
+#header .header-bg .header-img{
+    height:inherit;
+    /*background: #333 url('../img/header/th1.jpg') top center no-repeat;*/
+    background-size: cover;
+}
+#header [ini^="nag"] [bag="g"]{stroke:#fff;}
+#header [ini^="nag"] [bag="m"]{fill:#f00;}
+
+#header .header-btn{
+    height: inherit;
+    z-index: 2;
+}
+#header .header-btn .header-center {
+    width: 70%;
+    float: left;
+    height: inherit;
+    padding: 190px 0 0;
+}
+#header .header-center .page-title {
+    line-height: 100px;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+}
+#header .header-center .page-title h1 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 100px;
+}
+#header .header-center .page-title-bottom{}
+
+
+#header .header-btn .header-left{
+    width:15%;
+    float:left;
+    height: inherit;
+    border-radius:0 0 0 10px;
+}
+#header .header-btn .header-right{
+    width:15%;
+    float:right;
+    height: inherit;
+    border-radius: 0 0 10px 0;
+}
+#header .header-btn .header-arrow{
+    display: block;
+    width: 95px;
+    vertical-align: middle;
+    margin: auto;
+    top: 150px;
+    padding:5px;
+}
+
+
+
+/* Content */
+#badan .content svg{width:100%;height:100%;}
+#badan .content{
+    min-height: 200px;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #000;
+}
+#badan .content-inner{
+    padding:10px;
+}
+#badan .content-header {
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #000;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 15px;
+}
+#badan .content-header-left {
+    float: left;
+    height: inherit;
+    width: 80px;
+}
+#badan .content-header-right{
+    margin-left:90px;
+    line-height: inherit;
+}
+#badan .content-header-right h3 {
+    font-weight: inherit;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+#badan .content-prod{
+    height:200px;
+}
+#badan .content .prod-left{
+    float:left;
+    height:inherit;
+    width:10%;
+}
+#badan .content .prod-center{
+    float:left;
+    height:inherit;
+    width:80%;
+}
+#badan .content .prod-right{
+    float:right;
+    height:inherit;
+    width:10%;
+}
+
+/*
+* Product Product Thumbnails (prth)
+*/
+.product-wrapper{
+    height:inherit;
+}
+.product-wrapper-autosize{
+    height: inherit;
+}
+prth{
+    display:block;
+}
+prth.product-content{
+    float: left;
+    height: 100%;
+    margin-left: 5px;
+    width: 126px;
+    background: rgb(255, 255, 255);
+}
+prth:first-child{
+    margin-left:0 !important;
+}
+
+
+
+
+
+
+
+
+/*********************************
+* CSS KAKI
+*/
+#kaki {
+    min-height: 200px;
+    background: #000;
+    border-top: 5px solid #FF005E;
+    box-shadow: -10px 0 10px #000;
+}
+#kaki .kaki-wrap{
+}
