@@ -114,7 +114,22 @@ prodthumb.prototype.Prepare = function(){
     $(target.wrapper + " " + target.content).each(function(){
         var o = $(this),
             w = o.width(),
-            l = o.offset().left - $(target.wrapper).offset().left;
+            l = o.offset().left - $(target.wrapper).offset().left
+            c = $(this).find("[image]") || [],
+            b = c.attr("image") || [],
+            j = "";
+
+        for(i=0;i<b.length;i++){
+            j += (b[i] == "\\") ? "/" : b[i];
+        }
+        c.css({
+            backgroundImage: "url('" + j  + "')",
+            width: "inherit",
+            height: "inherit",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+        }).removeAttr("image");;
         temp.object.push({
             id      : o.attr("id"),
             left    : l,
