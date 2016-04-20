@@ -3,10 +3,10 @@
 */
 jQuery.event.add(window,"load",function() {
     
-    if(particles() === true){
+    //if(particles() === true){
         $("#loading").fadeOut(2000);
         //$("#loading").hide();
-    }
+    //}
 });
 jQuery.event.add(document,"ready",function() {
     test = new prodthumb();

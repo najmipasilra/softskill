@@ -37,6 +37,15 @@ b   > bagian paling spesifik
 /*
 * PUBLIK
 */
+[ini]{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
 [ini^="nag"] * {
     stroke-width:1.3px;
     /*-webkit-transition:0.5s;*/
@@ -54,8 +63,12 @@ b   > bagian paling spesifik
     stroke:none;
     fill:transparent;
 }
-
-
+/*
+* Mouse Pointer untuk Arah
+*/
+[ini^="nag arahKcl"], [ini^="nag arah"]{
+    cursor:pointer;
+}
 
 /*
 * Arah / Arrow / terserah apa yang kalian namakan.

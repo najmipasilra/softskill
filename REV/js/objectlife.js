@@ -93,7 +93,7 @@ Header = (function(object, param){
     this.Autorun();
 });
 prodthumb.prototype.Prepare = function(){
-    var 
+    var
         target = this.a.target,
         gap    = this.a.gap,
         temp   = {
@@ -115,14 +115,13 @@ prodthumb.prototype.Prepare = function(){
         var o = $(this),
             w = o.width(),
             l = o.offset().left - $(target.wrapper).offset().left,
-            c = $(this).find("[image]") || [],
-            b = c.attr("image") || [],
+            im = $(this).find("[image]") || [],
+            iu = im.attr("image") || 0,
             j = "";
-
-        for(i=0;i<b.length;i++){
-            j += (b[i] == "\\") ? "/" : b[i];
+        for(i=0;i<iu.length;i++){
+            j += (iu[i] == "\\") ? "/" : iu[i];
         }
-        c.css({
+        im.css({
             backgroundImage: "url('" + j  + "')",
             width: "inherit",
             height: "inherit",
@@ -141,8 +140,11 @@ prodthumb.prototype.Prepare = function(){
             },
             html    : o.html()
         });
-        if(i>0)
-            o.css({marginLeft:gap});
+        o.css({
+            marginLeft:((i>0) ? gap : 0),
+            height : ($(target.wrapper).height()-gap),
+            marginTop : (gap/2)
+        });
         i++;
         temp.slide = (temp.slide > w) ? temp.slide : w;
     });
@@ -250,26 +252,36 @@ prodthumb.prototype.maxRight = function(){ return (($(this.a.target.cover).offse
 prodthumb.prototype.Autorun = function(){  setInterval((function(){ if(!this.sys.hover) this.Right() }).bind(this), this.a.delay)};
 Header.prototype.Init = function(){
     var img  = this.obj[0].find(".dng-content"),
-        dim  = {w:0 , h:0},
+        ob  = {w:0 , h:0, class:null},
         temp = [],
         i    = 0,
         loc  = 0;
-    dim.w  = this.obj[0].width();
-    dim.h  = this.obj[0].height();
+
+    // dapatkan ukuran header .
+    ob.w  = this.obj[0].width();
+    ob.h  = this.obj[0].height();
+
+    // Sesuaikan ukuran bungkus, buat lebar = 3x lebar header
     this.obj[0].find("[gData=\"bungkus\"]").css({
-        width    : (3*dim.w),
-        height   : dim.h,
+        width    : (3*ob.w),
+        height   : ob.h,
         position : "relative",
-        left     : (0-dim.w)
+        left     : (0-ob.w)
     }).append("<div class=\"clear\"></div>");
+
+    // dapatkan objek img .
     img.each(function(){
-        var ur = $(this).attr("gURL"), l = "";
+        var ur = $(this).attr("image") || [],
+            l = "";
+
+        // mengganti karakter "\" menjadi "/" .
         for( j = 0 ; j < ur.length ; j++ ){
             l += (ur[j] == "\\") ? "/" : ur[j];
         }
+
+        // Simpan data ke Push .
         temp.push({
             id  : $(this).attr("id"),
-            class: $(this).attr("class"),
             url : l,
             visible : false,
             offsetX : loc,
@@ -278,24 +290,34 @@ Header.prototype.Init = function(){
                 prev:(i == 0 ? img.length-1 : i-1)
             }
         });
+        
         if(i<3 || i == img.length){
+            // buat gambar sesuaikan ukuran dengan Header,
+            // lalu hapus attribut gURL
             $(this).css({
-                width  : dim.w,
-                height : dim.h,
+                width  : ob.w,
+                height : ob.h,
                 float:"left",
                 backgroundImage : "url(" + l + ")",
                 backgroundSize:"cover"
-            }).removeAttr("gURL");
+            }).removeAttr("image");
 
         }else{
             $(this).remove();
         }
-        loc += dim.w; i++;
+        ob.class = $(this).attr("class");
+
+        loc += ob.w; // tambah terus untuk offset!
+        i++; // tambah terus untuk inkreanment OBJEK
     });
+
+    // set to Protected Variable
     this.obj[1].content = temp;
-    this.obj[1].w  = dim.w;
-    this.obj[1].h  = dim.h;
-    this.obj[1].x = (0-dim.w);
+    this.obj[1].class = ob.class;
+    this.obj[1].w  = ob.w;
+    this.obj[1].h  = ob.h;
+    this.obj[1].x = (0-ob.w);
+    // tambah elemen sebelum elemen 1, biar elemen dimulai dari 1.
     this.Add((-1))
 };
 Header.prototype.Add = function(loc){
