@@ -6,6 +6,7 @@
 *
 *
 */
+@import "../fonts/font-config.css";
 @import "icsvg.css";
 
 /* Clear Location */
@@ -127,7 +128,7 @@ body{
     padding: 0;
 }
 #nav ul.menu li {
-    /* float: left; */
+    float: left;
     line-height: 90px;
     min-width: 100px;
     text-align: center;
